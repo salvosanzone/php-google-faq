@@ -34,7 +34,7 @@ $faq = [
   ];
   
   //var_dump($faq);
-
+/*
   foreach($faq as $singleFaq){
     echo '<hr>';
     echo $singleFaq['question'] . '<br>';
@@ -43,7 +43,7 @@ $faq = [
     echo $singleFaq['answer'] . '<br>';
     echo '<hr>';
 
-  }
+  } */
 
 
 ?>
@@ -53,9 +53,49 @@ $faq = [
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./style/style.css">
   <title>Document</title>
 </head>
 <body>
-<h2>  </h2>
+  <div class="container">
+    <div class="logo">
+      <img src="./img/logo.png" alt="">
+    </div>
+    <div class="title">
+      <span>Privacy e Termini</span>
+    </div>
+  </div>
+  <div class="menu">
+    <ul>
+      <li>
+        <a href="">Introduzione</a>
+      </li>
+      <li>
+        <a href="">Norme sulla privacy</a>
+      </li>
+      <li>
+        <a href="">Termini di servizio</a>
+      </li>
+      <li>
+        <a href="">Tecnologie</a>
+      </li>
+      <li>
+        <a href="">Domande frequenti</a>
+      </li>
+    </ul>
+  </div>
+
+  <div class="container-faq">
+    <?php foreach($faq as $singleFaq) { ?>
+      <h2> <?php echo $singleFaq['question'] ?> </h2>
+      <p> <?php echo $singleFaq['answer'] ?>  </p>
+
+
+
+    <?php } ?>
+    
+  </div>
+  
+  
 </body>
 </html>
